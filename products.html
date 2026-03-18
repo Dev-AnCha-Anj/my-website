@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Angelica's Web Design Products</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+
+
+<style>
+html { 
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;        
+  background: #F7A37E;
+  color: #ffffff;
+}
+
+nav {
+  background: #2a2a2a;
+  padding: 15px;
+  position: sticky;  
+  top: 0;        
+  text-align: center;  
+  z-index: 1000;      
+}
+
+
+nav a {
+  color: #ffffff;;
+  text-decoration: none;  
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+
+header {
+  background: url("https://img.freepik.com/premium-photo/esports-merchandise-store-room-boys-with-shelves-gaming-m-illustration-trending-background-decor_1020495-168288.jpg") center/cover no-repeat;
+ color: white;
+  text-align: center;
+  height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+}
+
+
+#home h1 {
+  border: none;
+  font-weight; 800;
+  font-size: 150px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+#home h2 {
+  border: none;
+  font-weight 300;
+  font-size:50px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+#home p {
+  border: none;
+  font-weight; 400;
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+section {
+  padding: 50px;
+  margin: 40px;
+  background: #2a2a2a;
+  border-radius: 10px;                  
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+  color: #ffffff;
+}
+
+h2 {
+  border-bottom: 2px solid orange;
+  padding-bottom: 5px;
+  color: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;  
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+th, td {
+  border: 2px solid #333;
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background: #F7A37E;
+  color: #ffffff;
+}
+
+tr:hover {
+  background: #444;
+}
+
+/*BUTTONS*/
+button, input[type="submit"] {
+  padding: 8px 15px;
+  background:  orange;
+  border: none;       
+  cursor: pointer;   
+  border-radius: 20px;  
+  color: #000000;
+  font-weight: bold;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+footer {
+  background: #2a2a2a;
+  color:  #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-links a {
+  color: orange;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+</style>
+
+
+<script>
+   function showMessage(message){
+       alert(message);
+    }
+</script>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+	<a href="index.html#aboutme">About me</a>
+	<a href="index.html#resume">Resume</a>
+    <a href="#table">Products</a>
+    <a href="#merch">Merch</a>
+    <a href="index.html#contact">Contact</a>
+	<a href="video.html#merch">Video</a>
+  </nav>
+  
+  
+    <header id="home">
+    <h2>Hello, Welcome to</h2>
+	<h1>Angelica's Merch</h1>
+    <p>Future Developer in Progress — Debugging Life Daily.</p>
+  </header>
+  
+   <section id="table">
+  <div class="section-title-container">
+    <h2 class="main-title">Product <strong>List</strong></h2>
+	</div>
+
+  <table>
+
+    
+   <tr>
+      <th>Product</th>
+      <th>Brand</th>
+      <th>Price ($)</th>
+    </tr>
+
+    <tr>
+      <td>T-Shirt</td>
+      <td>Nike</td>
+      <td>70</td>
+    </tr>
+	
+    <tr>
+      <td>Cap</td>
+       <td>Puma</td>
+       <td>40</td>
+    </tr>
+	
+    <tr>
+       <td>Jacket</td>
+       <td>Adidas</td>
+       <td>120</td>
+    </tr>
+      
+
+    </table>
+	</section>
+	
+	
+<section id="merch">
+<div class="section-title-container">
+    <h2 class="main-title">Merchandise <strong>Order Form</strong></h2>
+	</div>
+
+<form onsubmit="showMessage('Order Submitted Successfully!'); return false;">
+<input type="text" placeholder="Full Name" required><br><br>
+<input type="text" placeholder="Email" required><br><br>
+<input type="text" placeholder="Contact No." required><br><br>
+<input type="text" placeholder="Address" required><br><br>
+    
+<label>Select Product:</label><br>
+<select>
+<option>T-shirt</option>
+<option>Cap</option>
+<option>Jacket</option>
+</select>
+<br><br>
+	  
+<input type="submit" value="Submit">
+</form>
+</section>
+
+</style>
+  </section>
+  
+  
+  
+  <footer>
+<p>© 2026 Angelica's Web Design Project</p>
+   
+<div class="footer-links">
+<a href="#home">Back to Top</a>   
+<a href="index.html#contact">Contact</a>
+<a href="index.html#aboutme">About</a>
+</div>
+
+<p>Design for Academic Submission</p>
+    
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

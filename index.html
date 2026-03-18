@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Angelica's Web Design Project</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+html { 
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;        
+  background: #F7A37E;
+  color: #ffffff;
+}
+
+nav {
+  background: #2a2a2a;
+  padding: 15px;
+  position: sticky;  
+  top: 0;        
+  text-align: center;  
+  z-index: 1000;      
+}
+
+
+nav a {
+  color: #ffffff;;
+  text-decoration: none;  
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+
+header {
+  background: url("https://www.wordtravels.com/dbpics/hero-images/California/california-la-sterling-davis-4iXagiKXn3Y-unsplash.jpg") center/cover no-repeat;
+ color: white;
+  text-align: center;
+  height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+}
+
+
+#home h1 {
+  border: none;
+  font-weight; 800;
+  font-size: 150px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+#home h2 {
+  border: none;
+  font-weight 300;
+  font-size:50px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+#home p {
+  border: none;
+  font-weight; 400;
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+section {
+  padding: 50px;
+  margin: 40px;
+  background: #2a2a2a;
+  border-radius: 10px;                  
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+  color: #ffffff;
+}
+
+.section-title-container {
+  text-align: center; 
+  margin-bottom: 40px; 
+  width: 100%;
+}
+
+h2 {
+  border-bottom: 2px solid orange;
+  padding-bottom: 5px;
+  color: #ffffff;
+}
+
+
+/*BUTTONS*/
+button, input[type="submit"] {
+  padding: 8px 15px;
+  background:  #b7d35b;
+  border: none;       
+  cursor: pointer;   
+  border-radius: 20px;  
+  color: #000000;
+  font-weight: bold;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+footer {
+  background: #2a2a2a;
+  color:  #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-links a {
+  color: orange;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.carousel-row {
+  display: flex;            
+  gap: 20px;               
+  align-items: flex-start; 
+  margin-top: 20px;
+}
+
+.carousel-col {
+  flex: 1;      
+  min-width: 0;  
+  text-align: center;
+}
+
+
+.carousel-col h3 {
+  margin-bottom: 10px;
+}
+
+.carousel-col .carousel-inner img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px; 
+}
+
+.carousel-caption h5 {
+  color: #ffffff;
+}
+
+
+.carousel-caption p {
+  color:  #ddd;
+}
+/* ABOUT ME yung center */
+#aboutme {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;    
+  text-align: center;
+}
+
+#aboutme ul,
+#aboutme ol {
+  list-style-position: inside;
+  padding: 0; 
+}
+#aboutme .carousel-row {
+  width: 100%;
+}
+
+
+/* CONTACT*/
+.contact-container{
+  display:flex;
+  gap:60px;
+  margin-top:30px;
+}
+
+.contact-form{
+  flex:2;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #555;
+  background:#333;
+  color:white;
+  border-radius:5px;
+}
+
+.contact-form textarea{
+  height:150px;
+  resize:none;
+}
+
+.contact-form button{
+  background: orange;
+  border:none;
+  padding:12px 30px;
+  border-radius:25px;
+  letter-spacing:2px;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  background:white;
+  color:black;
+}
+
+.contact-info{
+  flex:1;
+  color:#ccc;
+}
+
+
+
+/* RESUME */
+
+.resume-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.resume-column h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  border: none; /
+}
+
+
+.resume-card {
+  background: #2a2a2a; 
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.resume-card:hover {
+  background: #333; 
+}
+
+.resume-card .date {
+  color: orange; 
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.resume-card .degree {
+  color: orange;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.resume-card .description {
+  color: #ccc; 
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.resume-card .location {
+  color: #888; 
+  font-size: 14px;
+  display: block;
+  margin-top: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .resume-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-title-container {
+  text-align: center; 
+  margin-bottom: 50px; 
+}
+
+.main-title {
+  font-size: 45px; 
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  border-bottom: none !important; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.main-title strong {
+  color: orange; 
+  font-weight: 800; 
+}
+</style>
+
+
+
+<script>
+   function showMessage(message){
+       alert(message);
+    }
+</script>
+
+  </head>
+
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#aboutme">About me</a>
+	<a href="#resume">Resume</a>
+    <a href="products.html">Products</a>
+	 <a href="products.html#merch">Merch</a>
+    <a href="#contact">Contact</a>
+	<a href="video.html#merch">Video</a>
+	
+	
+  </nav>
+
+  <header id="home">
+    <h2>Hello, I'm</h2>
+	<h1>Angelica</h1>
+    <p>Future Developer in Progress — Debugging Life Daily.</p>
+  </header>
+
+
+  <section id="aboutme">
+    <div class="section-title-container">
+    <h2 class="main-title">About <strong>Me</strong></h2>
+</div>
+      <h3>Things I like to do</h3>
+    <ol>
+      <li>Playing games</li>
+      <li>Playing instruments</li>
+      <li>Motorcycle Riding</li>
+    </ol>
+
+   <div class="carousel-row">
+
+    <div class="carousel-col">
+        <h3>Top 3 Games</h3>
+		
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" class="d-block w-100" alt="GTA Online">
+             <div class="carousel-caption d-none d-md-block">
+                <h5>Grand Theft Auto Online</h5>
+                <p>One of my favorite open-world games where I explore and complete missions.</p>
+              </div>
+            </div>
+			
+			
+            <div class="carousel-item" data-bs-interval="4000">
+              <img src="https://img.redbull.com/images/c_crop,x_1015,y_0,h_1320,w_990/c_fill,w_450,h_600/q_auto,f_auto/redbullcom/2025/8/11/dcusojkfgapu4zxe3gtb/minecraft-landscape" class="d-block w-100" alt="Minecraft">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Minecraft</h5>
+                <p>I enjoy building creative worlds and exploring survival mode.</p>
+              </div>
+            </div>
+
+       
+            <div class="carousel-item" data-bs-interval="4000">
+              <img src="https://i.redd.it/yall-are-all-missing-the-forest-for-the-trees-with-the-new-v0-68y8mtxd8j7e1.jpg?width=1630&format=pjpg&auto=webp&s=4420d1ba35c77cb65dc95a30fff62ed4d8737f0c" alt="Project Zomboid">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Project Zomboid</h5>
+                <p>A realistic zombie survival game where players must gather supplies, build shelters, and survive.</p>
+              </div>
+            </div>
+
+          </div>
+		  
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+      
+           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+      </div>
+      <div class="carousel-col">
+        <h3>Top 3 Instruments</h3>
+
+
+        <div id="carouselInstrument" class="carousel carousel-instrument slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselInstrument" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselInstrument" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselInstrument" data-bs-slide-to="2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <img src="https://www.cortguitars.com/wp-content/uploads/2025/09/cort-earth-go-acoustic-guitar-home-hero-mobile_A.jpg" class="d-block w-100" alt="Guitar">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Guitar</h5>
+                <p>I enjoy playing the guitar because it helps me relax and express my creativity through music.</p>
+              </div>
+            </div>
+
+          
+            <div class="carousel-item" data-bs-interval="4000">
+              <img src="https://newspack-missionlocal.s3.amazonaws.com/mission/wp-content/uploads/2025/12/WilliamUnderwood_5996.jpeg" class="d-block w-100" alt="Flute">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Flute</h5>
+                <p>The flute produces soft and beautiful sounds that make playing music calm and enjoyable.</p>
+              </div>
+            </div>
+
+           
+            <div class="carousel-item" data-bs-interval="4000">
+              <img src="https://media.ipassio.com/media/ckeditor_image/2022/12/02/types-of-drum.jpg" alt="Drums">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Drums</h5>
+                <p>Drums bring energy and rhythm to music, making every beat feel alive and exciting.</p>
+              </div>
+            </div>
+
+          </div>
+
+         
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselInstrument" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselInstrument" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="carousel-col">
+        <h3>Top 3 Places</h3>
+		
+        <div id="carouselPlaces" class="carousel carousel-places slide">
+
+        
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselPlaces" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselPlaces" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselPlaces" data-bs-slide-to="2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <img src="https://i.ytimg.com/vi/GW-25pm-9lc/maxresdefault.jpg" class="d-block w-100" alt="Tagaytay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Tagaytay</h5>
+                <p>A popular destination known for its cool weather and beautiful view of Taal Volcano.</p>
+              </div>
+            </div>
+
+      
+            <div class="carousel-item" data-bs-interval="4000">
+              <img src="https://i.ytimg.com/vi/lZYDQDagKug/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBFekyBhQOAlQPQR7fMdG8Qu5k1_g" class="d-block w-100" alt="Ilocos">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Ilocos</h5>
+                <p>Famous for its historic landmarks, beautiful beaches, and long scenic roads.</p>
+              </div>
+            </div>
+
+           
+            <div class="carousel-item" data-bs-interval="4000">
+              <img src="https://i0.wp.com/saltybug.com/wp-content/uploads/2018/03/IlocosNorte.png?fit=800%2C800&ssl=1" alt="Marilaque">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Marilaque</h5>
+                <p>A scenic riding spot perfect for motorcycle trips with amazing mountain views.</p>
+              </div>
+            </div>
+
+          </div>
+		  
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlaces" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselPlaces" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+<section id="resume">
+<div class="resume-title-container">
+    <h2 class="main-title">My <strong>Resume</strong></h2>
+  </div>
+  
+<div class="resume-wrapper">
+  <div class="resume-column">
+    <h2>Education</h2>
+    <div class="resume-card">
+      <span class="date">June 2025 - Present</span>
+      <h3 class="degree">Associate in Computer Technology - Application Development</h3>
+      <p class="description">Skilled in building responsive web applications using HTML5, CSS3, and JavaScript.</p>
+      <span class="location">Informatics College of Imus</span>
+    </div>
+    
+    <div class="resume-card">
+      <span class="date">June 2012 to 2014</span>
+      <h3 class="degree">Bachelor of Science in Civil Engineering</h3>
+      <p class="description">Mastered advanced mathematical modeling and structural analysis, fostering a high level of logical thinking.</p>
+      <span class="location">University of Perpetual Help-System DALTA</span>
+    </div>
+  </div>
+
+  <div class="resume-column">
+    <h2>Experience</h2>
+    <div class="resume-card">
+      <span class="date">2018 - 2021</span>
+      <h3 class="degree">ESL Teacher</h3>
+      <p class="description">Here are the one-sentence descriptions for your resume, designed to be punchy and professional:
+
+51Talk | ESL Teacher
+
+Delivered personalized English language instruction to international students via a virtual platform to enhance linguistic proficiency and communication skills.</p>
+      <span class="location">51TALK - China</span>
+    </div>
+    
+    <div class="resume-card">
+      <span class="date">2021 - Present</span>
+      <h3 class="degree">Head Teacher</h3>
+      <p class="description">Lead the academic program and instructor team to prepare international students for successful online learning and subsequent deployment as exchange students to Arizona, USA.</p>
+      <span class="location">Nhat Quang International Academy - Vietnam</span>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="contact" class="contact">
+<div class="contact-container">
+
+    <!-- LEFT SIDE -->
+	<form class="contact-form" onsubmit="showMessage('Your message has been sent to Angelica!'); return false;">
+    <div class="contact-form">
+      
+	  <div class="section-title-container">
+    <h2 class="main-title">Get <strong>In Touch</strong></h2>
+</div>
+
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <input type="text" placeholder="Your Phone">
+
+      <textarea placeholder="Write a Message"></textarea>
+
+      <button>SEND MESSAGE</button>
+    </div>
+</form>
+    <!-- RIGHT SIDE -->
+	
+	<div></div>
+    <div class="contact-info">
+      <h3>My Contact Details</h3>
+
+      <p><strong>Email</strong><br>angeldev@gmail.com</p>
+
+      <p><strong>Phone</strong><br>+63 956 2154 9954</p>
+
+      <p><strong>Fax</strong><br>+30 976 1382 9922</p>
+
+      <p><strong>Address</strong><br>
+      San Francisco, CA<br>
+      4th Floor8 Lower<br>
+      San Francisco street, M1 50F
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+<p>© 2026 Angelica's Web Design Project</p>
+   
+<div class="footer-links">
+<a href="#home">Back to Top</a>   
+<a href="#contact-info">Contact</a>
+<a href="#aboutme">About</a>
+</div>
+
+<p>Design for Academic Submission</p>
+    
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
